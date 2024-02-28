@@ -12,3 +12,16 @@ datasource db {
   provider = "postgresql"
   url      = "postgresql://Yh010:uR6ISxoWidy8@ep-still-cherry-a5ycjgb4.us-east-2.aws.neon.tech/connectionPoolingTest?sslmode=require"
 }
+
+model Log {
+  id      Int    @id @default(autoincrement())
+  level   Level
+  message String
+  meta    Json
+}
+
+enum Level {
+  Info
+  Warn
+  Error
+}
