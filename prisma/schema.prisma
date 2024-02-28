@@ -15,13 +15,7 @@ datasource db {
 
 model Log {
   id      Int    @id @default(autoincrement())
-  level   Level
+  level   String
   message String
   meta    Json
-}
-
-enum Level {
-  Info
-  Warn
-  Error
 }
